@@ -13,6 +13,5 @@ connection.connect((err) => {
    }
 });
 
-//    let InsertCommand = `INSERT INTO TEST (userId,name) values(102,'hanuman')`;
 
 module.exports = connection;
