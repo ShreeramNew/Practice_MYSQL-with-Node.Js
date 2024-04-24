@@ -1,14 +1,16 @@
-const connection = require("./DataBaseConnect");
 require('dotenv').config();
 
-console.log(process.env.DB_NAME);
+const express=require('express');
 
-let selectCommad = "select * from test";
+const app=express();
+const PORT=3000;
+app.listen(PORT,()=>{
+   console.log("Ready to listen!");
+})
 
-connection.query(selectCommad, (err, result) => {
-   if (err) {
-      console.log(err);
-   } else {
-      console.log(result);
-   }
-});
+
+app.use('/name',require("./routers/GetData"));
+
+let myVal=process.env.DB_NAME||3000;
+console.log(myVal);
+
