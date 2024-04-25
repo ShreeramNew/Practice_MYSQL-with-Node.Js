@@ -14,6 +14,6 @@ app.listen(PORT,()=>{
 app.use('/name',require("./routers/GetData"));
 
 //To practice envoirnment variables:
-let myVal=process.env.DB_NAME||3000;
+let myVal=process.env.DB_PASSWORD||3000;
 console.log(myVal);
 
